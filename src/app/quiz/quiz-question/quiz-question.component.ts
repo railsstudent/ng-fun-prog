@@ -9,5 +9,5 @@ import { IQuestion, IPerson } from '../index';
 })
 export class QuizQuestionComponent {
 	@Input() array: IPerson[];
-	@Input() answers: IQuestion[];
+	@Input() problems: IQuestion[];
 }

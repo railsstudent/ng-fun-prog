@@ -1,3 +1,3 @@
 <div>
-  <quiz-question *ngFor="let array of arrays; let i = index" [array]="array" [answers]="answers[i]"></quiz-question>
+  <quiz-question *ngFor="let exercise of exercises; let i = index" [array]="exercise.array" [problems]="exercise.problems"></quiz-question>
 </div>

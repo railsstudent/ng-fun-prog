@@ -9,7 +9,12 @@ export interface IPerson {
 
 export interface IQuestion {
 	question: string;
-	result: IPerson[] | number;
+	results: IPerson[] | number;
+}
+
+export interface IExercise {
+	array: IPerson[];
+	problems: IQuestion[];
 }
 
 export { QuizModule };

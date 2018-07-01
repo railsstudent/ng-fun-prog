@@ -1,20 +1,20 @@
 <div>
   <p>Array:</p>
   <div class="array" *ngFor="let obj of array"><span>{{obj | json }}</span><br/></div>
-  <div class="answer" *ngFor="let ans of answers">
-    <p>{{ans.question}}</p>
-    <table *ngIf="ans.result.length">
+  <div class="answer" *ngFor="let p of problems">
+    <p>{{p.question}}</p>
+    <table *ngIf="p.results.length">
       <th>Name</th>
       <th>Age</th>
       <th>Gender</th>
       <th>In US?</th>
-      <tr *ngFor="let result of ans.result">
+      <tr *ngFor="let result of p.results">
         <td>{{result.name}}</td>
         <td>{{result.age}}</td>
         <td>{{result.gender}}</td>
         <td>{{result.us}}</td>
       </tr>
     </table>
-    <p *ngIf="!ans.result.length">{{ans.result}}</p>
+    <p *ngIf="!p.results.length">{{p.results}}</p>
   </div>
 </div>
