@@ -1,24 +1,20 @@
 <div>
-  <div>
-    <p>Array:</p>
-    <p>{{array}}</p>
-  </div>
-  <div>
-    <div class="answer" *ngFor="let ans of answers">
-      <p>{{ans.question}}</p>
-      <table *ngIf="ans.result.length">
-        <th>Name</th>
-        <th>Age</th>
-        <th>Gender</th>
-        <th>In US?</th>
-        <tr *ngFor="let result of ans.result">
-          <td>{{result.name}}</td>
-          <td>{{result.age}}</td>
-          <td>{{result.gender}}</td>
-          <td>{{result.us}}</td>
-        </tr>
-      </table>
-      <p *ngIf="!ans.result.length">{{ans.result}}</p>
-    </div>
+  <p>Array:</p>
+  <div class="array" *ngFor="let obj of array"><span>{{obj | json }}</span><br/></div>
+  <div class="answer" *ngFor="let ans of answers">
+    <p>{{ans.question}}</p>
+    <table *ngIf="ans.result.length">
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>In US?</th>
+      <tr *ngFor="let result of ans.result">
+        <td>{{result.name}}</td>
+        <td>{{result.age}}</td>
+        <td>{{result.gender}}</td>
+        <td>{{result.us}}</td>
+      </tr>
+    </table>
+    <p *ngIf="!ans.result.length">{{ans.result}}</p>
   </div>
 </div>

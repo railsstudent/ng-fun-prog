@@ -1,5 +1,5 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
-import { IQuestion } from '../index';
+import { IQuestion, IPerson } from '../index';
 
 @Component({
 	selector: 'quiz-question',
@@ -8,6 +8,6 @@ import { IQuestion } from '../index';
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class QuizQuestionComponent {
-	@Input() array: string;
+	@Input() array: IPerson[];
 	@Input() answers: IQuestion[];
 }

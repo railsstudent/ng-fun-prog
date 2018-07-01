@@ -208,10 +208,6 @@ export class AppComponent implements OnInit {
 		];
 
 		this.answers.push(array1Answers, array2Answers, array3Answers);
-		this.arrays = [
-			JSON.stringify(texasss),
-			JSON.stringify(newieyork),
-			JSON.stringify(vegzas)
-		];
+		this.arrays = [texasss, newieyork, vegzas];
 	}
 }
