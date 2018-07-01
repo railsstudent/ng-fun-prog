@@ -161,11 +161,13 @@ export class AppComponent implements OnInit {
 		// Part 2 - Sort all users by age
 		// Part 3 -  List all female coders
 
-		const sortedByUSName = newieyork.filter(t => t.us === true).sort((a, b) => {
-			const aLowercase = a.name.toLowerCase();
-			const bLowercase = b.name.toLowerCase();
-			return aLowercase < bLowercase ? -1 : aLowercase > bLowercase ? 1 : 0;
-		});
+		const sortedByUSName = JSON.parse(JSON.stringify(newieyork))
+			.filter(t => t.us === true)
+			.sort((a, b) => {
+				const aLowercase = a.name.toLowerCase();
+				const bLowercase = b.name.toLowerCase();
+				return aLowercase < bLowercase ? -1 : aLowercase > bLowercase ? 1 : 0;
+			});
 
 		const array2Answers: IQuestion[] = [
 			{
@@ -174,7 +176,9 @@ export class AppComponent implements OnInit {
 			},
 			{
 				question: 'Part 2 - Sort all users by age',
-				results: newieyork.sort((a, b) => a.age - b.age)
+				results: JSON.parse(JSON.stringify(newieyork)).sort(
+					(a, b) => a.age - b.age
+				)
 			},
 			{
 				question: 'Part 3 - List all female coders',
