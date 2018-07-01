@@ -4,7 +4,7 @@ export interface IPerson {
 	name: string;
 	age: number;
 	gender: string;
-	us: boolean;
+	us?: boolean;
 }
 
 export interface IQuestion {
