@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { IQuestion } from '../index';
 
 @Component({
 	selector: 'quiz-app',
 	templateUrl: './quiz-app.component.html',
-	styleUrls: ['./quiz-app.component.scss']
+	styleUrls: ['./quiz-app.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class QuizAppComponent implements OnInit {
-	questions = [1, 2, 3];
-	answers = [];
-
-	constructor() {}
-
-	ngOnInit() {}
+export class QuizAppComponent {
+	@Input() arrays: string[];
+	@Input() answers: IQuestion[][];
 }
